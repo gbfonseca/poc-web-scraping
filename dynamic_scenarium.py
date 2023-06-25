@@ -22,5 +22,7 @@ def dynamic_scenarium():
     driver.close()
     df = parse_html_to_df(html_content=html_content)
     
+    df['Endereço'] = df['Endereço'].replace('', 'Sem endereço cadastrado')
+
     # Transforma o DataFrame em um arquivo csv
     df.to_csv("complex.csv")

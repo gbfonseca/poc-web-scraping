@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-def parse_html_to_df(html_content):
+def parse_html_to_df(html_content: str):
     soup = BeautifulSoup(html_content, "html.parser")
 
     # Encontrar a tabela na página HTML
