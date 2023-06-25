@@ -29,5 +29,5 @@ def automated_scenarium():
     result_df['Endereço'] = result_df['Endereço'].replace('', 'Sem endereço cadastrado')
 
     # Transforma o DataFrame em um arquivo csv
-    result_df.to_csv("complex.csv")
+    result_df.to_csv("automated.csv")
     return
