@@ -3,6 +3,7 @@ import pandas as pd
 
 
 def parse_html_to_df(html_content: str):
+    '''Parsing de html para pandas DataFrame'''
     soup = BeautifulSoup(html_content, "html.parser")
 
     # Encontrar a tabela na página HTML
@@ -23,4 +24,3 @@ def parse_html_to_df(html_content: str):
     # Criar o DataFrame usando as listas de dados e cabeçalho
     del data[0]
     return pd.DataFrame(data, columns=header)
-
