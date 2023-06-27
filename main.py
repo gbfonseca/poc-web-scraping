@@ -4,7 +4,14 @@ from automated_scenarium import automated_scenarium
 
 
 if __name__ == "__main__":
-    if sys.argv[1] == 'simple_scenarium':
-        simple_scenarium()
+    if len(sys.argv) == 1:
+        print("Passe como argumento um dos cenários possíveis:")
+        print("1 - simple_scenarium")
+        print("2 - automated_scenarium")
     else:
-        automated_scenarium()
+        if sys.argv[1] == 'simple_scenarium':
+            simple_scenarium()
+        elif sys.argv[1] == 'automated_scenarium':
+            automated_scenarium()
+
+

@@ -7,7 +7,9 @@ URI = "https://fundamentus.com.br/index.php"
 
 def automated_scenarium():
     '''Cenário automatizado'''
-    driver = webdriver.Firefox()
+    options = webdriver.FirefoxOptions()
+    # options.add_argument("--headless")
+    driver = webdriver.Firefox(options=options)
     driver.get(URI)
     fii_a = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/span/a[2]')
     fii_a.click()
